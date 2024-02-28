@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #a20707;
+    background-color: #fff9f9;
   }
   
   header {
-    background-color: #ad0bb993;
-    color: #ffffff;
+    background-color: #e9f90a93;
+    color: #000000;
     padding: 20px;
   }
   
@@ -19,11 +19,13 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    background-color: #11ffe7;
   }
   
   nav ul li {
     display: inline;
     margin-right: 20px;
+    background-color: #11ffe7;
   }
   
   nav ul li a {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meu Portfólio</title>
-  <link rel="stylesheet" href="./test.css">
+  <link rel="stylesheet" href="test.css">
 </head>
 <body>
   <header>
@@ -36,7 +36,11 @@
 
   <section id="projetos">
     <h2>Projetos</h2>
-    <!-- Adicione os seus projetos aqui -->
+    <div class="carousel">
+      <img src="projeto1.jpg" alt="Projeto 1">
+      <img src="projeto2.jpg" alt="Projeto 2">
+      <img src="projeto3.jpg" alt="Projeto 3">
+    </div>
   </section>
 
   <section id="contato">
@@ -44,5 +48,39 @@
     <p>Email: seuemail@example.com</p>
     <p>Telefone: (XX) XXXX-XXXX</p>
   </section>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.carousel img');
+    
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        if (i === index) {
+          slide.style.display = 'block';
+        } else {
+          slide.style.display = 'none';
+        }
+      });
+    }
+    
+    function nextSlide() {
+      currentIndex++;
+      if (currentIndex >= slides.length) {
+        currentIndex = 0;
+      }
+      showSlide(currentIndex);
+    }
+    
+    function prevSlide() {
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = slides.length - 1;
+      }
+      showSlide(currentIndex);
+    }
+    
+    showSlide(currentIndex);
+    setInterval(nextSlide, 3000);
+  </script>
 </body>
 </html>
